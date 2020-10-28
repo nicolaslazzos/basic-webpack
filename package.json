@@ -1,0 +1,23 @@
+{
+  "name": "basic-webpack",
+  "version": "1.0.0",
+  "description": "Basic webpack configuration for building a project",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolaslazzos/basic-webpack.git"
+  },
+  "author": "Nicolas Lazzos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolaslazzos/basic-webpack/issues"
+  },
+  "homepage": "https://github.com/nicolaslazzos/basic-webpack#readme",
+  "devDependencies": {
+    "webpack": "^5.3.0",
+    "webpack-cli": "^4.1.0"
+  }
+}
