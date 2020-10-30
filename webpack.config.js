@@ -1,4 +1,5 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const config = {
   entry: "./src/index.js",
@@ -6,6 +7,7 @@ const config = {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
   },
+  plugins: [new MiniCssExtractPlugin()],
   module: {
     rules: [
       {
@@ -16,8 +18,8 @@ const config = {
       },
       {
         // cuando hay mas de un loader, se ejecutan respetando el orden y la salida de uno es la entrada del otro
-        use: ["style-loader", "css-loader"],
-        test: /\.css$/
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.css$/,
       },
     ],
   },
