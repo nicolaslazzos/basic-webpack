@@ -14,6 +14,11 @@ const config = {
         use: "babel-loader",
         test: /\.js$/,
       },
+      {
+        // cuando hay mas de un loader, se ejecutan respetando el orden y la salida de uno es la entrada del otro
+        use: ["style-loader", "css-loader"],
+        test: /\.css$/
+      },
     ],
   },
 };
